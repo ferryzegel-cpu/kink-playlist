@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Spotify callback</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.5; }
+    code, textarea { width: 100%; box-sizing: border-box; font-family: monospace; }
+    textarea { height: 120px; }
+    .box { background: #f6f6f6; padding: 16px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Spotify toestemming gelukt</h1>
+  <p>Kopieer de code hieronder en plak die straks in GitHub bij de workflow <strong>Get Spotify Token</strong>.</p>
+
+  <div class="box">
+    <p><strong>Code:</strong></p>
+    <textarea id="code" readonly></textarea>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code") || "";
+    document.getElementById("code").value = code;
+  </script>
+</body>
+</html>
